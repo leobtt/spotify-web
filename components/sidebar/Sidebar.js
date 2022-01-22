@@ -32,7 +32,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Menu */}
-      <div className="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 space-y-4 h-screen w-72 sm:max-w-[12rem] lg:max-w-[15rem] hidden md:flex md:flex-col">
+      <div className="text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900 space-y-4 h-screen  sm:max-w-[12rem] lg:max-w-[15rem] hidden md:flex md:flex-col pb-28">
         <Button name="Sair" Icon={LogoutIcon} click={() => signOut()} />
         <Button name="Ínicio" Icon={HomeIcon} />
         <Button name="Buscar" Icon={SearchIcon} />
@@ -49,7 +49,7 @@ const Sidebar = () => {
           {playlists.map((playlist) => (
             <p
               key={playlist.id}
-              className="cursor-pointer hover:text-white "
+              className="cursor-pointer truncate w-46 hover:text-white focus:text-green-400"
               onClick={() => setPlaylistId(playlist.id)}
             >
               {playlist.name}

@@ -39,7 +39,7 @@ const Center = () => {
   }, [spotifyApi, playlistId])
 
   return (
-    <div className="flex-grow">
+    <div className="flex-grow h-screen overflow-y-scroll scrollbar-hide pb-28">
       <header className="absolute top-3 right-4">
         <div className="flex items-center space-x-3 rounded-full p-[2px] pr-3 bg-black opacity-90 hover:opacity-80 cursor-pointer">
           {/* too many domains for next/image */}
@@ -66,7 +66,7 @@ const Center = () => {
         </div>
       </header>
       <section
-        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8`}
+        className={`flex items-end space-x-7 bg-gradient-to-b to-black ${color} h-80 text-white p-8 overflow-y-scroll scrollbar-hide`}
       >
         {/* I use the tag <img> cause there are too many image domains on spotify  */}
         <img
